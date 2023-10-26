@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehrwertsteuerechner</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mehrwertsteuer-Rechner</h1>
+    </header>
+    <main>
+        <div class="rechnerContainer">
+            <form onsubmit="return false">
+                <div class="formatBlock">
+                    <p>Was soll berechnet werden?</p>
+                    <input checked type="radio" name="nettoBrutto" id="plusMwSt">
+                    <label class="textFormat" for="plusMwSt">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+                    <br>
+                    <input type="radio" name="nettoBrutto" id="noMwSt">
+                    <label class="textFormat" for="noMwSt">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+                </div>
+                <div class="formatBlock">
+                    <p>Mehrwertsteuersatz</p>
+                    <input type="radio" name="prozent" id="prozent19" checked>
+                    <label class="textFormat" for="prozent19">19%</label>
+                    <br>
+                    <input type="radio" name="prozent" id="prozent7">
+                    <label class="textFormat" for="prozent7">7%</label>
+                </div>
+                <div class="formatBlock">
+                    <label class="textFormat" for="inputField" id="inputFieldLabel">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<span>*</span></label>
+                    <br>
+                    <input class="inputField" type="number" name="inputNumber" id="inputField">
+                </div>
+                <div class="formatBlockdiff">
+                    <input id="button" class="button" type="submit" value="Berechnen">
+                    <p class="result">Ergebnis</p>
+                </div>
+                <div class="formatBlock">
+                    <p>Mehrwertsteuerbetrag</p>
+                    <p id="MwStBetrag" class="textFormat">€</p>
+                </div>
+                <div class="formatBlock">
+                    <p id="resultBrutNet">Bruttobetrag (Endpreis)</p>
+                    <p id="suchBetrag" class="textFormat">€</p>
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
